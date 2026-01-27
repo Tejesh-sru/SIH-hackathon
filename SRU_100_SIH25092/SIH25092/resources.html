@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Mental Health Resources - Access guided meditation, mood journaling, therapy sessions, and PHQ-9 assessments.">
+  <meta name="keywords" content="mental health resources, meditation, therapy, mood journal, PHQ-9 test">
+  <meta name="author" content="Mental Health Support Team">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <title>Mental Health Resources - Wellness Portal</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/lightbox.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1c2a;
+      color: #fff;
+    }
+    .resources-container {
+      margin-top: 120px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      color: #000;
+      width: 280px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 15px 0 8px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+    .card p {
+      font-size: 14px;
+      padding: 0 15px;
+      margin-bottom: 18px;
+      color: #555;
+      line-height: 1.5;
+    }
+    .btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      border-radius: 6px;
+      background: #f59e0b;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #d97706;
+      color: #fff;
+      text-decoration: none;
+    }
+    .page {
+      display: none;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 120px auto 40px;
+    }
+    .page.active {
+      display: block;
+    }
+    .back-btn {
+      display: inline-block;
+      margin: 10px 0 30px;
+      padding: 10px 20px;
+      border-radius: 6px;
+      background: #f59e0b;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .back-btn:hover {
+      background: #d97706;
+      color: #fff;
+      text-decoration: none;
+    }
+    .question {
+      margin: 15px 0;
+      padding: 10px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 6px;
+    }
+    .question select {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: none;
+      background: #fff;
+      color: #333;
+    }
+    form input,
+    form textarea,
+    form select {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+      background: #fff;
+      color: #333;
+    }
+    form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    form button {
+      background: #f59e0b;
+      border: none;
+      padding: 12px 24px;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    form button:hover {
+      background: #d97706;
+    }
+    iframe {
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    #result, #bookingResult {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    .nav-auth {
+      margin-left: 20px;
+    }
+    .dropdown-menu {
+      min-width: 180px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header clearfix" role="banner">
+    <div class="logo">
+      <a href="index.html"><em>Mental</em> Support</a>
+    </div>
+    <a href="#menu" class="menu-link" aria-label="Toggle navigation menu"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-submenu">
+          <a href="about.html">About Us</a>
+          <ul class="sub-menu">
+            <li><a href="about.html">Who we are?</a></li>
+            <li><a href="about.html#mission">What we do?</a></li>
+            <li><a href="about.html#team">How it works?</a></li>
+          </ul>
+        </li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="therapy.html">Therapy</a></li>
+        <li><a href="comm.html">Community</a></li>
+
+        <!-- Login & Signup Links -->
+        <li id="loginLink" class="nav-auth">
+          <a href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+        </li>
+        <li id="signupLink">
+          <a href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a>
+        </li>
+
+        <!-- Profile Menu -->
+        <li id="profileMenu" class="dropdown d-none">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profileName" aria-haspopup="true" aria-expanded="false"></a>
+          <div class="dropdown-menu" aria-labelledby="profileName">
+            <a class="dropdown-item" href="#" onclick="logout(); return false;">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content text-dark">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="loginEmail">Email address</label>
+              <input type="email" class="form-control" id="loginEmail" required>
+            </div>
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input type="password" class="form-control" id="loginPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content text-dark">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="signupForm">
+            <div class="form-group">
+              <label for="signupName">Full Name</label>
+              <input type="text" class="form-control" id="signupName" required>
+            </div>
+            <div class="form-group">
+              <label for="signupEmail">Email address</label>
+              <input type="email" class="form-control" id="signupEmail" required>
+            </div>
+            <div class="form-group">
+              <label for="signupPassword">Password</label>
+              <input type="password" class="form-control" id="signupPassword" required minlength="6">
+              <small class="form-text text-muted">Password must be at least 6 characters long.</small>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home Page -->
+  <div id="home" class="page active">
+    <div class="resources-container">
+      <div class="card">
+        <img src="https://i.pinimg.com/originals/c3/39/9d/c3399d9086cbf827f1adaea88b5cc6b6.jpg" alt="Guided Meditation">
+        <h3>Guided Meditation</h3>
+        <p>Practice mindfulness and reduce stress through expert-led meditation sessions.</p>
+        <a href="#" class="btn" onclick="openPage('meditation'); return false;">Try Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.ncMKWTLnVDeeapmTskf5dAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Mood Journal">
+        <h3>Mood Journal</h3>
+        <p>Track your emotions daily and reflect on your progress over time.</p>
+        <a href="#" class="btn" onclick="openPage('journal'); return false;">Start Journaling</a>
+      </div>
+
+      <div class="card">
+        <img src="https://www.verywellmind.com/thmb/kHhayX8LLTXo51-qVgBQM5jj_t4=/2292x1525/filters:fill(ABEAC3,1)/200391849-001-56a792533df78cf772973e6c.jpg" alt="Therapy Sessions">
+        <h3>Therapy Sessions</h3>
+        <p>Book confidential therapy sessions with qualified mental health professionals.</p>
+        <a href="#" class="btn" onclick="openPage('therapy'); return false;">Book Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.83OyTEUlpbwzME_fLc50zQHaEc?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Motivational Blogs">
+        <h3>Motivational Blogs</h3>
+        <p>Read uplifting stories and watch motivational videos to stay positive.</p>
+        <a href="#" class="btn" onclick="openPage('blogs'); return false;">Read Blogs</a>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/id/1027/400/200" alt="PHQ-9 Depression Assessment">
+        <h3>PHQ-9 Test</h3>
+        <p>Take the PHQ-9 depression assessment test and get personalized suggestions.</p>
+        <a href="#" class="btn" onclick="openPage('phq9'); return false;">Take Test</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meditation Page -->
+  <div id="meditation" class="page">
+    <a href="#" class="back-btn" onclick="openPage('home'); return false;">← Back to Resources</a>
+    <h2>Guided Meditation</h2>
+    <p>Here are some guided meditation videos to help you find inner peace and reduce stress:</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <iframe width="360" height="200" src="https://www.youtube.com/embed/inpok4MKVLM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Guided Meditation Video 1"></iframe>
+      <iframe width="360" height="200" src="https://www.youtube.com/embed/ZToicYcHIOU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Guided Meditation Video 2"></iframe>
+    </div>
+  </div>
+
+  <!-- Journal Page -->
+  <div id="journal" class="page">
+    <a href="#" class="back-btn" onclick="openPage('home'); return false;">← Back to Resources</a>
+    <h2>Mood Journal</h2>
+    <p>Write down your thoughts and feelings. This helps you track your emotional patterns and progress.</p>
+    <form id="journalForm" style="max-width: 600px; margin: 0 auto;">
+      <textarea id="journalEntry" rows="8" placeholder="Write your thoughts here... How are you feeling today? What made you happy or sad?"></textarea><br>
+      <button type="submit" class="btn">Save Entry</button>
+    </form>
+    <div id="journalResult"></div>
+  </div>
+
+  <!-- Therapy Page -->
+  <div id="therapy" class="page">
+    <a href="#" class="back-btn" onclick="openPage('home'); return false;">← Back to Resources</a>
+    <h2>Book Therapy Session</h2>
+    <p>Fill out the form below to request a therapy session with one of our licensed professionals.</p>
+    <form id="therapyForm" style="max-width: 500px; margin: 0 auto;">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="date" name="date" required>
+      <input type="time" name="time" required>
+      <textarea name="notes" placeholder="Any specific concerns or topics you'd like to discuss?" rows="4"></textarea>
+      <button type="submit">Submit Booking</button>
+    </form>
+    <div id="bookingResult"></div>
+  </div>
+
+  <!-- Blogs Page -->
+  <div id="blogs" class="page">
+    <a href="#" class="back-btn" onclick="openPage('home'); return false;">← Back to Resources</a>
+    <h2>Motivational Blogs & Videos</h2>
+    <h3>Featured Articles</h3>
+    <ul style="line-height: 2; font-size: 16px;">
+      <li><strong>Overcoming Challenges:</strong> How small steps can change your life.</li>
+      <li><strong>Mind Over Matter:</strong> Building resilience during tough times.</li>
+      <li><strong>Daily Positivity:</strong> Creating habits that rewire your brain for happiness.</li>
+      <li><strong>Self-Compassion:</strong> Learning to be kind to yourself on difficult days.</li>
+    </ul>
+    <h3 style="margin-top: 30px;">Motivational Videos</h3>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <iframe width="360" height="200" src="https://www.youtube.com/embed/ZXsQAXx_ao0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Motivational Video 1"></iframe>
+      <iframe width="360" height="200" src="https://www.youtube.com/embed/KxGRhd_iWuE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Motivational Video 2"></iframe>
+    </div>
+  </div>
+
+  <!-- PHQ-9 Page -->
+  <div id="phq9" class="page">
+    <a href="#" class="back-btn" onclick="openPage('home'); return false;">← Back to Resources</a>
+    <h2>PHQ-9 Depression Test</h2>
+    <p><strong>Instructions:</strong> Over the last 2 weeks, how often have you been bothered by any of the following problems?</p>
+    <form id="phqForm" style="max-width: 700px; margin: 0 auto;">
+      <div class="question">
+        <strong>1. Little interest or pleasure in doing things?</strong>
+        <select name="q1" required>
+          <option value="0">Not at all</option>
+          <option value="1">Several days</option>
+          <option value="2">More than half the days</option>
+          <option value="3">Nearly every day</option>
+        </select>
+      </div>
+      <div class="question">
+        <strong>2. Feeling down, depressed, or hopeless?</strong>
+        <select name="q2" required>
+          <option value="0">Not at all</option>
+          <option value="1">Several days</option>
+          <option value="2">More than half the days</option>
+          <option value="3">Nearly every day</option>
+        </select>
+      </div>
+      <div class="question">
+        <strong>3. Trouble falling or staying asleep, or sleeping too much?</strong>
+        <select name="q3" required>
+          <option value="0">Not at all</option>
+          <option value="1">Several days</option>
+          <option value="2">More than half the days</option>
+          <option value="3">Nearly every day</option>
+        </select>
+      </div>
+      <div class="question">
+        <strong>4. Feeling tired or having little energy?</strong>
+        <select name="q4" required>
+          <option value="0">Not at all</option>
+          <option value="1">Several days</option>
+          <option value="2">More than half the days</option>
+          <option value="3">Nearly every day</option>
+        </select>
+      </div>
+      <div class="question">
+        <strong>5. Poor appetite or overeating?</strong>
+        <select name="q5" required>
+          <option value="0">Not at all</option>
+          <option value="1">Several days</option>
+          <option value="2">More than half the days</option>
+          <option value="3">Nearly every day</option>
+        </select>
+      </div>
+      <div class="question">
+        <strong>6. Feeling bad about yourself or that you are a failure or have let yourself or your family down?</strong>
+        <select name="q6" required>
+          <option value="0">Not at all</option>
+          <option value="1">Several days</option>
+          <option value="2">More than half the days</option>
+          <option value="3">Nearly every day</option>
+        </select>
+      </div>
+      <div class="question">
+        <strong>7. Trouble concentrating on things, such as reading the newspaper or watching television?</strong>
+        <select name="q7" required>
+          <option value="0">Not at all</option>
+          <option value="1">Several days</option>
+          <option value="2">More than half the days</option>
+          <option value="3">Nearly every day</option>
+        </select>
+      </div>
+      <div class="question">
+        <strong>8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that you have been moving around a lot more than usual?</strong>
+        <select name="q8" required>
+          <option value="0">Not at all</option>
+          <option value="1">Several days</option>
+          <option value="2">More than half the days</option>
+          <option value="3">Nearly every day</option>
+        </select>
+      </div>
+      <div class="question">
+        <strong>9. Thoughts that you would be better off dead, or of hurting yourself in some way?</strong>
+        <select name="q9" required>
+          <option value="0">Not at all</option>
+          <option value="1">Several days</option>
+          <option value="2">More than half the days</option>
+          <option value="3">Nearly every day</option>
+        </select>
+      </div>
+      <button type="submit" class="btn" style="width: 100%; max-width: 500px;">Submit Assessment</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer role="contentinfo" style="margin-top: 60px; padding: 20px; text-align: center; background: rgba(255,255,255,0.05);">
+    <div class="container">
+      <p>&copy; 2025 Mental Health Support App | Caring for Your Wellbeing</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/video.js"></script>
+  <script src="assets/js/slick-slider.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    // ===== Page Navigation =====
+    function openPage(id) {
+      document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ===== Authentication Scripts =====
+    document.addEventListener("DOMContentLoaded", () => {
+      const user = JSON.parse(localStorage.getItem("loggedInUser"));
+      if (user) {
+        showProfile(user.name);
+      }
+    });
+
+    // Signup Form Handler
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("signupName").value.trim();
+      const email = document.getElementById("signupEmail").value.trim();
+      const password = document.getElementById("signupPassword").value;
+
+      if (!email.includes("@")) {
+        alert("⚠️ Please enter a valid email address.");
+        return;
+      }
+
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      if (users.find(u => u.email === email)) {
+        alert("⚠️ Email already registered. Please login instead.");
+        return;
+      }
+
+      const newUser = { name, email, password };
+      users.push(newUser);
+      localStorage.setItem("users", JSON.stringify(users));
+      localStorage.setItem("loggedInUser", JSON.stringify(newUser));
+
+      $('#signupModal').modal('hide');
+      showProfile(name);
+      this.reset();
+      alert("✅ Account created successfully! Welcome, " + name + "!");
+    });
+
+    // Login Form Handler
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("loginEmail").value.trim();
+      const password = document.getElementById("loginPassword").value;
+
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      const user = users.find(u => u.email === email && u.password === password);
+
+      if (user) {
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
+        $('#loginModal').modal('hide');
+        showProfile(user.name);
+        this.reset();
+        alert("✅ Welcome back, " + user.name + "!");
+      } else {
+        alert("❌ Invalid email or password. Please try again.");
+      }
+    });
+
+    function showProfile(name) {
+      document.getElementById("loginLink").classList.add("d-none");
+      document.getElementById("signupLink").classList.add("d-none");
+      document.getElementById("profileMenu").classList.remove("d-none");
+      document.getElementById("profileName").textContent = name;
+    }
+
+    function logout() {
+      if (confirm("Are you sure you want to logout?")) {
+        localStorage.removeItem("loggedInUser");
+        document.getElementById("loginLink").classList.remove("d-none");
+        document.getElementById("signupLink").classList.remove("d-none");
+        document.getElementById("profileMenu").classList.add("d-none");
+        alert("👋 Logged out successfully");
+      }
+    }
+
+    // ===== PHQ-9 Assessment Logic =====
+    document.getElementById("phqForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const form = new FormData(e.target);
+      let score = 0;
+      for (let [key, value] of form.entries()) {
+        score += parseInt(value);
+      }
+
+      let message = "";
+      let suggestion = "";
+      let severity = "";
+
+      if (score <= 4) {
+        severity = "Minimal";
+        message = "Minimal or no depression.";
+        suggestion = "😊 You're doing well! Maintain healthy habits like regular exercise, journaling, meditation, and social connection.";
+      } else if (score <= 9) {
+        severity = "Mild";
+        message = "Mild depression.";
+        suggestion = "📓 Consider trying mindfulness practices, mood journaling, guided meditation, and talking with supportive friends or family.";
+      } else if (score <= 14) {
+        severity = "Moderate";
+        message = "Moderate depression.";
+        suggestion = "💡 We recommend considering professional guidance along with self-care activities. You don't have to face this alone.";
+      } else if (score <= 19) {
+        severity = "Moderately Severe";
+        message = "Moderately severe depression.";
+        suggestion = "⚠️ We strongly recommend consulting a counselor or mental health professional soon. Professional support can make a significant difference.";
+      } else {
+        severity = "Severe";
+        message = "Severe depression.";
+        suggestion = "🚨 Please seek professional help immediately. Contact a therapist, mental health helpline, or your healthcare provider. You are not alone, and help is available.";
+      }
+
+      document.getElementById("result").innerHTML = `
+        <div style="padding: 20px; background: rgba(255,255,255,0.15); border-radius: 8px; margin-top: 20px;">
+          <h3>Assessment Results</h3>
+          <p><strong>Your Score:</strong> ${score}/27</p>
+          <p><strong>Severity:</strong> ${severity}</p>
+          <p><strong>Assessment:</strong> ${message}</p>
+          <p style="margin-top: 15px;"><em><strong>Suggestion:</strong></em> ${suggestion}</p>
+          <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;"><em>Note: This assessment is a screening tool and not a diagnosis. Please consult with a healthcare professional for a comprehensive evaluation.</em></p>
+        </div>
+      `;
+    });
+
+    // ===== Therapy Booking Form =====
+    document.getElementById("therapyForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("bookingResult").innerHTML = 
+        "<div style='padding: 15px; background: rgba(76, 175, 80, 0.2); border-radius: 6px; color: #4caf50;'><strong>✅ Success!</strong> Your therapy session request has been submitted. We'll contact you soon to confirm your appointment.</div>";
+      this.reset();
+    });
+
+    // ===== Journal Form =====
+    document.getElementById("journalForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const entry = document.getElementById("journalEntry").value;
+      if (!entry.trim()) {
+        alert("Please write something before saving.");
+        return;
+      }
+      
+      // Save to localStorage
+      let entries = JSON.parse(localStorage.getItem("journalEntries")) || [];
+      entries.push({
+        date: new Date().toISOString(),
+        content: entry
+      });
+      localStorage.setItem("journalEntries", JSON.stringify(entries));
+      
+      document.getElementById("journalResult").innerHTML = 
+        "<div style='padding: 15px; background: rgba(76, 175, 80, 0.2); border-radius: 6px; color: #4caf50; margin-top: 15px;'><strong>✅ Saved!</strong> Your journal entry has been saved successfully.</div>";
+      document.getElementById("journalEntry").value = "";
+    });
+  </script>
+</body>
+</html>

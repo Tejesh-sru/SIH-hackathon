@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Mental Health Support App - Find resources, therapy, and wellness tools.">
+  <meta name="author" content="">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <title>Mental Health Support App</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/lightbox.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#"><em>Mental</em> Support</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="#section1">Home</a></li>
+        <li class="has-submenu"><a href="about.html">About Us</a>
+          <ul class="sub-menu">
+            
+          </ul>
+        </li>
+        <li><a href="resources.html">Resources</a></li>
+  
+        
+<!-- ===== JavaScript for Auth ===== -->
+<script>
+  // On page load, check if logged in
+  document.addEventListener("DOMContentLoaded", () => {
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (user) {
+      showProfile(user.name);
+    }
+  });
+
+  // Signup
+  document.getElementById("signupForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const user = {
+      name: document.getElementById("signupName").value,
+      email: document.getElementById("signupEmail").value,
+      password: document.getElementById("signupPassword").value
+    };
+
+    localStorage.setItem("user", JSON.stringify(user));
+    alert("✅ Signup successful! You can now login.");
+    $('#signupModal').modal('hide');
+  });
+
+  // Login
+  document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+
+    if (storedUser && storedUser.email === email && storedUser.password === password) {
+      localStorage.setItem("loggedInUser", JSON.stringify(storedUser));
+      alert("✅ Welcome " + storedUser.name);
+      $('#loginModal').modal('hide');
+      showProfile(storedUser.name);
+    } else {
+      alert("❌ Invalid email or password");
+    }
+  });
+
+  // Show profile in navbar
+  function showProfile(name) {
+    document.getElementById("auth-links").style.display = "none";
+    document.getElementById("signup-link").style.display = "none";
+    document.getElementById("profile-menu").classList.remove("d-none");
+    document.getElementById("profileName").textContent = name;
+  }
+
+  // Logout
+  function logout() {
+    localStorage.removeItem("loggedInUser");
+    document.getElementById("auth-links").style.display = "inline-block";
+    document.getElementById("signup-link").style.display = "inline-block";
+    document.getElementById("profile-menu").classList.add("d-none");
+    alert("👋 Logged out successfully");
+  }
+</script>
+
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Banner -->
+  <section class="section main-banner" id="top" data-section="section1">
+    <video autoplay muted loop id="bg-video">
+      <source src="assets/images/mental-health-video.mp4" type="video/mp4" />
+    </video>
+
+    <div class="video-overlay header-text">
+      <div class="caption">
+        <h6>Find Balance & Inner Peace</h6>
+        <h2><em>Your</em> Mental Health Companion</h2>
+        <div class="main-button">
+          <div class="scroll-to-section"><a href="#section2">Get Started</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" data-section="section3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-12">
+          <div class="features-post">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-heart"></i> Self-Care Tools</h4>
+              </div>
+              <div class="content-hide">
+                <p>Access guided meditations, mood tracking, and breathing exercises designed to help you relax and recharge.</p>
+                <div class="scroll-to-section"><a href="tools.html">Learn More</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post second-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-users"></i> Therapy Support</h4>
+              </div>
+              <div class="content-hide">
+                <p>Connect with licensed professionals and support groups in a safe and confidential space.</p>
+                <div class="scroll-to-section"><a href="therapy.html">Find Support</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post third-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-hand-holding-heart"></i> Community</h4>
+              </div>
+              <div class="content-hide">
+                <p>Join a caring community where you can share experiences, tips, and encouragement with others.</p>
+                <div class="scroll-to-section"><a href="comm.html">Join Now</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="section why-us" data-section="section2">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Why Choose Our App?</h2>
+      </div>
+      <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">Trusted Experts</a></li>
+          <li><a href="#tabs-2">24/7 Access</a></li>
+          <li><a href="#tabs-3">Safe & Confidential</a></li>
+        </ul>
+        <section class="tabs-content">
+          <article id="tabs-1">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="https://www.verywellmind.com/thmb/kHhayX8LLTXo51-qVgBQM5jj_t4=/2292x1525/filters:fill(ABEAC3,1)/200391849-001-56a792533df78cf772973e6c.jpg" alt="">
+              </div>
+              <div class="col-md-6">
+                <h4>Trusted Experts</h4>
+                <p>Our platform is supported by licensed mental health professionals, ensuring reliable guidance.</p>
+              </div>
+            </div>
+          </article>
+          <article id="tabs-2">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="assets/images/choose-us-image-02.png" alt="">
+              </div>
+              <div class="col-md-6">
+                <h4>Access Anytime</h4>
+                <p>Whether it’s day or night, our app provides resources and support whenever you need them.</p>
+              </div>
+            </div>
+          </article>
+          <article id="tabs-3">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="assets/images/choose-us-image-03.png" alt="">
+              </div>
+              <div class="col-md-6">
+                <h4>Confidential & Secure</h4>
+                <p>Your privacy is our top priority. All sessions and data are protected and safe with us.</p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Mental Health Support App | Caring for Your Wellbeing</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/video.js"></script>
+  <script src="assets/js/slick-slider.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DharmaGPT - Wisdom Bot</title>
+  <style>
+    /* Floating DharmaGPT Button */
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dharma Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #2c3e50;
+      margin:0;
+      padding: 0;
+    }
+
+    /* Toggle Button */
+    #dharma-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #f1c40f;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Chat Window */
+    #dharma-chat {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 320px;
+      height: 420px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    #dharma-header {
+      background: #f1c40f;
+      padding: 10px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #dharma-header button {
+      border: none;
+      background: white;
+      cursor: pointer;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Messages area */
+    #dharma-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      background: #fafafa;
+    }
+
+    .msg-user {
+      text-align: right;
+      margin: 5px 0;
+      padding: 6px 10px;
+      background: #dff9fb;
+      border-radius: 8px;
+      display: inline-block;
+      max-width: 80%;
+    }
+
+    .msg-bot {
+      text-align: left;
+      margin: 5px 0;
+      padding: 6px 10px;
+      background: #f6e58d;
+      border-radius: 8px;
+      display: inline-block;
+      max-width: 80%;
+    }
+
+    /* Input area */
+    #dharma-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+
+    #user-msg {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      outline: none;
+    }
+
+    #send-btn {
+      background: #f1c40f;
+      border: none;
+      padding: 8px 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Toggle Button -->
+  <button id="dharma-btn">Dharma Chat</button>
+
+  <!-- Chat Window -->
+  <div id="dharma-chat">
+    <div id="dharma-header">
+      Dharma Support
+      <button onclick="toggleDharmaGPT()">×</button>
+    </div>
+    <div id="dharma-messages"></div>
+    <div id="dharma-input">
+      <input type="text" id="user-msg" placeholder="Type your message...">
+      <button id="send-btn" onclick="sendToDharma()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleDharmaGPT() {
+      const chat = document.getElementById("dharma-chat");
+      chat.style.display = chat.style.display === "block" ? "none" : "block";
+    }
+
+    function appendMessage(text, sender = "bot") {
+      const box = document.getElementById("dharma-messages");
+      const msg = document.createElement("div");
+      msg.className = sender === "user" ? "msg-user" : "msg-bot";
+      msg.textContent = text;
+      box.appendChild(msg);
+      box.scrollTop = box.scrollHeight;
+    }
+
+    function sendToDharma() {
+      const input = document.getElementById("user-msg");
+      const text = input.value.trim();
+      if (!text) return;
+
+      appendMessage(text, "user");
+      input.value = "";
+
+      let reply = "🙏 Dharma always protects those who protect it.";
+
+      const lower = text.toLowerCase();
+      if (lower.includes("fear")) {
+        reply = "🕉 Arjuna once doubted himself before battle, but Krishna guided him. Lesson: Face fear with clarity and duty.";
+      } else if (lower.includes("anger")) {
+        reply = "⚔ Lakshmana struggled with anger, but Rama taught him patience. Lesson: Strength is mastering anger.";
+      } else if (lower.includes("stress")) {
+        reply = "☮ Like meditation in the Gita, peace begins with a calm mind. Try deep breathing now.";
+      } else if (lower.includes("sad")) {
+        reply = "💙 Even Krishna played the flute to heal sadness. Lesson: express your heart, and let joy flow back.";
+      }
+
+      setTimeout(() => {
+        appendMessage(reply, "bot");
+      }, 600);
+    }
+
+    // Toggle button
+    document.getElementById("dharma-btn").addEventListener("click", toggleDharmaGPT);
+
+    // Enter key sends message
+    document.getElementById("user-msg").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") sendToDharma();
+    });
+  </script>
+</body>
+</html>
+<!-- ===== Navigation Section ===== -->
+<header class="main-header clearfix" role="header">
+  <div class="logo">
+    <a href="#home"><em>Mental</em> Support</a>
+  </div>
+  <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+  <nav id="menu" class="main-nav" role="navigation">
+    <ul class="main-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===== Dummy Sections for Scroll ===== -->
+<section id="home" style="padding:100px; text-align:center; background:#f8f9fa;">
+  <h2>🏠 Home</h2>
+  <p>Welcome to the Mental Health Support App.</p>
+</section>
+
+<section id="resources" style="padding:100px; text-align:center; background:#eaf6ff;">
+  <h2>📚 Resources</h2>
+  <p>Explore wellness guides, therapy tools, and self-care resources.</p>
+</section>
+
+<section id="contact" style="padding:100px; text-align:center; background:#fef6e4;">
+  <h2>📩 Contact</h2>
+  <p>Reach out to us anytime for support.</p>
+</section>
+
+
+<ul class="main-menu">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#resources">Resources</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Mental Health Support App - Find resources, therapy, and wellness tools.">
+  <meta name="author" content="">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <title>Mental Health Support App</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/lightbox.css">
+
+  <style>
+    body { font-family: Arial, sans-serif; background: #0b1c2a; color: #fff; }
+    .resources-container { margin-top: 120px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; padding: 20px; }
+    .card { background: #fff; color: #000; width: 240px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.4); text-align: center; }
+    .card img { width: 100%; height: 160px; object-fit: cover; }
+    .card h3 { margin: 12px 0 6px; font-size: 18px; font-weight: bold; }
+    .card p { font-size: 14px; padding: 0 12px; margin-bottom: 14px; color: #444; }
+    .btn-custom { display: inline-block; margin-bottom: 16px; padding: 8px 14px; border-radius: 6px; background: #f59e0b; color: #fff; font-weight: bold; text-decoration: none; transition: background 0.2s; }
+    .btn-custom:hover { background: #d97706; }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Header (your version, extended with profile menu) -->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#"><em>Mental</em> Support</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-submenu"><a href="#section2">About Us</a>
+          <ul class="sub-menu">
+            <li><a href="#section2">Who we are?</a></li>
+            <li><a href="#section3">What we do?</a></li>
+            <li><a href="#section3">How it works?</a></li>
+          </ul>
+        </li>
+        <li><a href="resources.html">Resources</a></li>
+        
+
+       
+        <!-- Profile Menu -->
+        <li id="profile-menu" class="d-none dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profileName"></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ✅ Example Resources Section -->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Wellness Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1c2a;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #1c2e3e;
+      color: #fbbf24;
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+    .card {
+      background: #fff;
+      color: #000;
+      width: 240px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: scale(1.05); }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 12px 0 6px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .card p {
+      font-size: 14px;
+      padding: 0 12px;
+      margin-bottom: 14px;
+      color: #444;
+    }
+    .btn {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background: #f59e0b;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #d97706; }
+    .page {
+      display: none;
+      padding: 20px;
+    }
+    .page.active { display: block; }
+    .back-btn {
+      display: inline-block;
+      margin: 10px 0 20px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background: #f59e0b;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .back-btn:hover { background: #d97706; }
+    .question { margin: 12px 0; }
+    form input, form textarea, form select {
+      width: 90%;
+      padding: 8px;
+      margin: 6px 0;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+    }
+    form button {
+      background: #f59e0b;
+      border: none;
+      padding: 10px 14px;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    form button:hover { background: #d97706; }
+  </style>
+</head>
+<body>
+  <header>Mental Wellness Portal</header>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Care Tools</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #d7f8f6, #fcefe6);
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    header {
+      padding: 20px;
+      background: #4db6ac;
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: center;
+    }
+    section {
+      margin: 40px auto;
+      padding: 30px;
+      max-width: 600px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+    audio {
+      width: 100%;
+      margin: 15px 0;
+    }
+    select, button {
+      padding: 10px 15px;
+      margin: 10px 5px 0 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    #breathingCircle {
+      width: 150px;
+      height: 150px;
+      background: #4db6ac;
+      border-radius: 50%;
+      margin: 20px auto;
+      transition: transform 1s ease-in-out;
+    }
+    #breathingInstruction {
+      font-size: 1.2em;
+      margin-top: 10px;
+      height: 24px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>🌿 Self-Care Tools 🌿</header>
+
+  <!-- 1. Guided Meditation -->
+  <section id="meditation">
+    <h2>🧘 Guided Meditation</h2>
+    <p>10-minute guided meditation for relaxation.</p>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <!-- 2. Mood Uplifting Music -->
+  <section id="music">
+    <h2>🎶 Mood Uplifting Music</h2>
+    <p>Soothing background music to uplift your mood.</p>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <!-- 3. Breathing Relaxation -->
+  <section id="breathing">
+    <h2>🌬 Breathing Relaxation</h2>
+    <p>Breathing exercise with calming audio guidance.</p>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <p>Select a breathing pattern:</p>
+    <select id="breathingPattern">
+      <option value="4-4-4">Box Breathing (4-4-4)</option>
+      <option value="4-7-8">Relax Breathing (4-7-8)</option>
+      <option value="5-5">Equal Breathing (5-5)</option>
+    </select>
+    <br>
+    <button onclick="startBreathing()">Start</button>
+    <button onclick="stopBreathing()">Stop</button>
+    <button onclick="resetBreathing()">Reset</button>
+
+    <div id="breathingCircle"></div>
+    <p id="breathingInstruction"></p>
+  </section>
+
+  <script>
+    let breathingTimeout;
+    let isRunning = false;
+
+    function startBreathing() {
+      if (isRunning) return;
+      isRunning = true;
+
+      const pattern = document.getElementById('breathingPattern').value;
+      let inhale, hold, exhale;
+
+      if (pattern === "4-4-4") { inhale = 4; hold = 4; exhale = 4; }
+      else if (pattern === "4-7-8") { inhale = 4; hold = 7; exhale = 8; }
+      else if (pattern === "5-5") { inhale = 5; hold = 0; exhale = 5; } // fixed equal breathing
+
+      const circle = document.getElementById('breathingCircle');
+      const instruction = document.getElementById('breathingInstruction');
+
+      function cycle() {
+        if (!isRunning) return;
+
+        // Inhale
+        instruction.innerText = `Inhale: ${inhale}s`;
+        circle.style.transform = 'scale(1.5)';
+
+        breathingTimeout = setTimeout(() => {
+          // Hold (if applicable)
+          if (hold > 0) {
+            instruction.innerText = `Hold: ${hold}s`;
+          }
+
+          breathingTimeout = setTimeout(() => {
+            // Exhale
+            instruction.innerText = `Exhale: ${exhale}s`;
+            circle.style.transform = 'scale(1)';
+
+            // Restart cycle
+            breathingTimeout = setTimeout(cycle, exhale * 1000);
+          }, hold * 1000);
+        }, inhale * 1000);
+      }
+
+      cycle();
+    }
+
+    function stopBreathing() {
+      clearTimeout(breathingTimeout);
+      isRunning = false;
+      document.getElementById('breathingInstruction').innerText = 'Paused';
+    }
+
+    function resetBreathing() {
+      clearTimeout(breathingTimeout);
+      isRunning = false;
+      document.getElementById('breathingCircle').style.transform = 'scale(1)';
+      document.getElementById('breathingInstruction').innerText = '';
+    }
+  </script>
+</body>
+</html>

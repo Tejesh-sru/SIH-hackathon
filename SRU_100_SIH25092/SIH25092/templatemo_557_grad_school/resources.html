@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Mental Health Support App - Find resources, therapy, and wellness tools.">
+  <meta name="author" content="">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <title>Mental Health Support App</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/lightbox.css">
+
+  <style>
+    body { font-family: Arial, sans-serif; background: #0b1c2a; color: #fff; }
+    .resources-container { margin-top: 120px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; padding: 20px; }
+    .card { background: #fff; color: #000; width: 240px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.4); text-align: center; }
+    .card img { width: 100%; height: 160px; object-fit: cover; }
+    .card h3 { margin: 12px 0 6px; font-size: 18px; font-weight: bold; }
+    .card p { font-size: 14px; padding: 0 12px; margin-bottom: 14px; color: #444; }
+    .btn-custom { display: inline-block; margin-bottom: 16px; padding: 8px 14px; border-radius: 6px; background: #f59e0b; color: #fff; font-weight: bold; text-decoration: none; transition: background 0.2s; }
+    .btn-custom:hover { background: #d97706; }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Header (your version, extended with profile menu) -->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#"><em>Mental</em> Support</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-submenu"><a href="#section2">About Us</a>
+          <ul class="sub-menu">
+            <li><a href="#section2">Who we are?</a></li>
+            <li><a href="#section3">What we do?</a></li>
+            <li><a href="#section3">How it works?</a></li>
+          </ul>
+        </li>
+        <li><a href="resources.html">Resources</a></li>
+        
+
+       
+        <!-- Profile Menu -->
+        <li id="profile-menu" class="d-none dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="profileName"></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ✅ Example Resources Section -->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Wellness Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1c2a;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #1c2e3e;
+      color: #fbbf24;
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+    .card {
+      background: #fff;
+      color: #000;
+      width: 240px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: scale(1.05); }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 12px 0 6px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .card p {
+      font-size: 14px;
+      padding: 0 12px;
+      margin-bottom: 14px;
+      color: #444;
+    }
+    .btn {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background: #f59e0b;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #d97706; }
+    .page {
+      display: none;
+      padding: 20px;
+    }
+    .page.active { display: block; }
+    .back-btn {
+      display: inline-block;
+      margin: 10px 0 20px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background: #f59e0b;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .back-btn:hover { background: #d97706; }
+    .question { margin: 12px 0; }
+    form input, form textarea, form select {
+      width: 90%;
+      padding: 8px;
+      margin: 6px 0;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+    }
+    form button {
+      background: #f59e0b;
+      border: none;
+      padding: 10px 14px;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    form button:hover { background: #d97706; }
+  </style>
+</head>
+<body>
+  <header>Mental Wellness Portal</header>
+
+  <!-- Home Page -->
+  <div id="home" class="page active">
+    <div class="container">
+      <div class="card">
+        <img src="https://i.pinimg.com/originals/c3/39/9d/c3399d9086cbf827f1adaea88b5cc6b6.jpg" alt="Meditation">
+        <h3>Guided Meditation</h3>
+        <p>Practice mindfulness and reduce stress through expert-led meditation sessions.</p>
+        <a href="#" class="btn" onclick="openPage('meditation')">Try Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.ncMKWTLnVDeeapmTskf5dAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Journal">
+        <h3>Mood Journal</h3>
+        <p>Track your emotions daily and reflect on your progress over time.</p>
+        <a href="#" class="btn" onclick="openPage('journal')">Start Journaling</a>
+      </div>
+
+      <div class="card">
+        <img src="https://www.verywellmind.com/thmb/kHhayX8LLTXo51-qVgBQM5jj_t4=/2292x1525/filters:fill(ABEAC3,1)/200391849-001-56a792533df78cf772973e6c.jpg" alt="Therapy">
+        <h3>Therapy Sessions</h3>
+        <p>Book confidential therapy sessions with qualified mental health professionals.</p>
+        <a href="#" class="btn" onclick="openPage('therapy')">Book Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.83OyTEUlpbwzME_fLc50zQHaEc?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Blogs">
+        <h3>Motivational Blogs</h3>
+        <p>Read uplifting stories and watch motivational videos to stay positive.</p>
+        <a href="#" class="btn" onclick="openPage('blogs')">Read Blogs</a>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/id/1027/400/200" alt="PHQ-9">
+        <h3>PHQ-9 Test</h3>
+        <p>Take the PHQ-9 depression assessment test and get suggestions.</p>
+        <a href="#" class="btn" onclick="openPage('phq9')">Take Test</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meditation Page -->
+  <div id="meditation" class="page">
+    <a href="#" class="back-btn" onclick="openPage('home')">⬅ Back to Home</a>
+    <h2>Guided Meditation</h2>
+    <p>Here are some guided meditation videos:</p>
+    <iframe width="360" height="200" src="https://www.youtube.com/embed/inpok4MKVLM" frameborder="0" allowfullscreen></iframe>
+    <iframe width="360" height="200" src="https://www.youtube.com/embed/ZToicYcHIOU" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <!-- Journal Page -->
+  <div id="journal" class="page">
+    <a href="#" class="back-btn" onclick="openPage('home')">⬅ Back to Home</a>
+    <h2>Mood Journal</h2>
+    <textarea rows="6" cols="50" placeholder="Write your thoughts here..."></textarea><br><br>
+    <button class="btn">Save Entry</button>
+  </div>
+
+  <!-- Therapy Page -->
+  <div id="therapy" class="page">
+    <a href="#" class="back-btn" onclick="openPage('home')">⬅ Back to Home</a>
+    <h2>Book Therapy Session</h2>
+    <form id="therapyForm">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="date" name="date" required>
+      <input type="time" name="time" required>
+      <textarea name="notes" placeholder="Any specific concerns?" rows="4"></textarea>
+      <button type="submit">Submit Booking</button>
+    </form>
+    <p id="bookingResult"></p>
+  </div>
+
+  <!-- Blogs Page -->
+  <div id="blogs" class="page">
+    <a href="#" class="back-btn" onclick="openPage('home')">⬅ Back to Home</a>
+    <h2>Motivational Blogs & Videos</h2>
+    <ul>
+      <li><strong>Overcoming Challenges:</strong> How small steps can change your life.</li>
+      <li><strong>Mind Over Matter:</strong> Building resilience during tough times.</li>
+      <li><strong>Daily Positivity:</strong> Creating habits that rewire your brain.</li>
+    </ul>
+    <h3>Motivational Videos</h3>
+    <iframe width="360" height="200" src="https://www.youtube.com/embed/ZXsQAXx_ao0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="360" height="200" src="https://www.youtube.com/embed/KxGRhd_iWuE" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <!-- PHQ-9 Page -->
+  <div id="phq9" class="page">
+    <a href="#" class="back-btn" onclick="openPage('home')">⬅ Back to Home</a>
+    <h2>PHQ-9 Depression Test</h2>
+    <form id="phqForm">
+      <div class="question">1. Little interest or pleasure in doing things? 
+        <select name="q1"><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select>
+      </div>
+      <div class="question">2. Feeling down, depressed, or hopeless? 
+        <select name="q2"><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select>
+      </div>
+      <div class="question">3. Trouble sleeping or oversleeping? 
+        <select name="q3"><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select>
+      </div>
+      <div class="question">4. Feeling tired or having little energy? 
+        <select name="q4"><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select>
+      </div>
+      <div class="question">5. Poor appetite or overeating? 
+        <select name="q5"><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select>
+      </div>
+      <div class="question">6. Feeling bad about yourself? 
+        <select name="q6"><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select>
+      </div>
+      <div class="question">7. Trouble concentrating? 
+        <select name="q7"><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select>
+      </div>
+      <div class="question">8. Moving/speaking slowly or being restless? 
+        <select name="q8"><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select>
+      </div>
+      <div class="question">9. Thoughts of self-harm? 
+        <select name="q9"><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select>
+      </div>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function openPage(id) {
+      document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+
+    // PHQ-9 Logic
+    document.getElementById("phqForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const form = new FormData(e.target);
+      let score = 0;
+      for(let [key, value] of form.entries()){
+        score += parseInt(value);
+      }
+
+      let message = "";
+      let suggestion = "";
+
+      if(score <= 4) {
+        message = "Minimal depression.";
+        suggestion = "😊 Maintain healthy habits like exercise, journaling, meditation, and social connection.";
+      }
+      else if(score <= 9) {
+        message = "Mild depression.";
+        suggestion = "📓 Try mindfulness, mood journaling, guided meditation, and talking with supportive friends.";
+      }
+      else if(score <= 14) {
+        message = "Moderate depression.";
+        suggestion = "💡 Consider professional guidance along with self-care activities.";
+      }
+      else if(score <= 19) {
+        message = "Moderately severe depression.";
+        suggestion = "⚠ Strongly recommended to consult a counselor or mental health professional soon.";
+      }
+      else {
+        message = "Severe depression.";
+        suggestion = "🚨 Please seek professional help immediately. Contact a therapist or mental health helpline.";
+      }
+
+      document.getElementById("result").innerHTML = `
+        <p><strong>Your Score:</strong> ${score} → ${message}</p>
+        <p><em>Suggestion:</em> ${suggestion}</p>
+      `;
+    });
+
+    // Therapy Form
+    document.getElementById("therapyForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("bookingResult").innerHTML = 
+        "✅ Your therapy session request has been submitted. We’ll contact you soon!";
+    });
+  </script>
+</body>
+</html>

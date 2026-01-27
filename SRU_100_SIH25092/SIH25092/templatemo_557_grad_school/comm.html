@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Mental Health Support App - Find resources, therapy, and wellness tools.">
+  <meta name="author" content="">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <title>Mental Health Support App</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/lightbox.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#"><em>Mental</em> Support</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-submenu"><a href="#section2">About Us</a>
+          <ul class="sub-menu">
+            <li><a href="#section2">Who we are?</a></li>
+            <li><a href="#section3">What we do?</a></li>
+            <li><a href="#section3">How it works?</a></li>
+          </ul>
+        </li>
+        <li><a href="resources.html">Resources</a></li>
+        
+         <!-- Login & Signup -->
+        <li class="nav-auth">
+          <a href="login.html" data-toggle="modal" data-target="#loginModal">Login</a>
+        </li>
+        <li>
+          <a href="login.html" data-toggle="modal" data-target="#signupModal">Sign Up</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .community-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 700px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    p.description {
+      text-align: center;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      width: 100%;
+    }
+
+    button.post-btn {
+      padding: 10px 20px;
+      background: #00bcd4;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    button.post-btn:hover {
+      background: #0097a7;
+    }
+
+    ul#messages {
+      list-style: none;
+      padding: 0;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    ul#messages li {
+      background: #e0f7fa;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      word-wrap: break-word;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      position: relative;
+    }
+
+    .message-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .category-tag {
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+      color: white;
+    }
+
+    .category-stress { background: #f44336; }
+    .category-motivation { background: #4caf50; }
+    .category-study { background: #ff9800; }
+    .category-mental { background: #9c27b0; }
+
+    .message-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .like-btn, .reply-btn {
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 16px;
+      transition: transform 0.2s;
+    }
+
+    .like-btn:hover, .reply-btn:hover {
+      transform: scale(1.2);
+    }
+
+    .replies {
+      margin-top: 8px;
+      padding-left: 15px;
+      border-left: 2px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .reply-item {
+      background: #d1f0f7;
+      padding: 8px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="community-container">
+    <h1>Community</h1>
+    <p class="description">Join a caring community where you can share experiences, tips, and encouragement with others.</p>
+
+    <form id="post-form">
+      <input type="text" id="username" placeholder="Your Name" required>
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option value="Stress">Stress</option>
+        <option value="Motivation">Motivation</option>
+        <option value="Study Tips">Study Tips</option>
+        <option value="Mental Health">Mental Health</option>
+      </select>
+      <textarea id="message-input" rows="3" placeholder="Share your experience or tip..." required></textarea>
+      <button type="submit" class="post-btn">Post</button>
+    </form>
+
+    <ul id="messages"></ul>
+  </div>
+
+  <script>
+    const form = document.getElementById('post-form');
+    const messagesList = document.getElementById('messages');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const category = document.getElementById('category').value;
+      const message = document.getElementById('message-input').value.trim();
+
+      if(username && category && message){
+        const li = document.createElement('li');
+
+        const header = document.createElement('div');
+        header.className = 'message-header';
+        const nameSpan = document.createElement('span');
+        nameSpan.textContent = username;
+        const timeSpan = document.createElement('span');
+        const now = new Date();
+        timeSpan.textContent = now.toLocaleString();
+        header.appendChild(nameSpan);
+        header.appendChild(timeSpan);
+
+        const categoryTag = document.createElement('span');
+        categoryTag.textContent = category;
+        categoryTag.className = 'category-tag category-' + category.toLowerCase().replace(' ', '');
+        header.appendChild(categoryTag);
+
+        const content = document.createElement('p');
+        content.textContent = message;
+
+        const actions = document.createElement('div');
+        actions.className = 'message-actions';
+        const likeBtn = document.createElement('button');
+        likeBtn.textContent = '❤';
+        likeBtn.className = 'like-btn';
+        let liked = false;
+        likeBtn.addEventListener('click', () => {
+          liked = !liked;
+          likeBtn.style.color = liked ? '#ff1744' : '#ff4081';
+        });
+
+        const replyBtn = document.createElement('button');
+        replyBtn.textContent = 'Reply';
+        replyBtn.className = 'reply-btn';
+
+        const repliesContainer = document.createElement('div');
+        repliesContainer.className = 'replies';
+
+        replyBtn.addEventListener('click', () => {
+          const replyText = prompt("Enter your reply:");
+          if(replyText){
+            const replyItem = document.createElement('div');
+            replyItem.className = 'reply-item';
+            replyItem.textContent = replyText;
+            repliesContainer.appendChild(replyItem);
+          }
+        });
+
+        actions.appendChild(likeBtn);
+        actions.appendChild(replyBtn);
+
+        li.appendChild(header);
+        li.appendChild(content);
+        li.appendChild(actions);
+        li.appendChild(repliesContainer);
+
+        messagesList.appendChild(li);
+
+        // Clear form
+        form.reset();
+        messagesList.scrollTop = messagesList.scrollHeight;
+      }
+    });
+  </script>
+</body>
+</html>
