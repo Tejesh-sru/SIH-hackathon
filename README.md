@@ -125,4 +125,4 @@ The **Digital Mental Health & Psychological Support System** aims to bridge the 
 ---
 
 ### 🏆 Smart India Hackathon 2025  
-**Team: DYNAMIC THINKERS**
+**Team: DYNAMIC THINKERS** 
