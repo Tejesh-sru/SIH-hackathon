@@ -19,7 +19,7 @@
 - **Team Name:** DYNAMIC THINKERS  
 
 ---
-
+ 
 ## 💡 IDEA TITLE
 
 **Digital Mental Wellness Platform for Higher Education Students**
